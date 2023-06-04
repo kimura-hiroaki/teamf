@@ -1,0 +1,43 @@
+@use "variables" as global;
+@use "mixin";
+
+.footer {
+    padding: 55px 0;
+
+    &_wrap {
+        display: flex;
+        align-items: center;
+    }
+
+    &_left {
+        margin-right: auto;
+    }
+
+    &_right {
+        margin-left: auto;
+    }
+
+    &_sns {
+        display: flex;
+
+        &_twitter {
+            width: 26px;
+        }
+
+        &_instagram {
+            width: 26px;
+        }
+    }
+
+    &_nav {
+        &_ul {
+            display: flex;
+        }
+
+        &_li {
+            &:not(:first-child) {
+                margin-left: 20px;
+            }
+        }
+    }
+}

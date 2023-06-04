@@ -17,3 +17,14 @@ img {
 a {
   color: inherit;
 }
+
+.inner {
+  width: 1000px;
+  max-width: calc(100% - 90px * 2);
+  margin-left: auto;
+  margin-right: auto;
+
+  @include mixin.mq(sp) {
+    max-width: calc(100% - 20px * 2);
+  }
+}
