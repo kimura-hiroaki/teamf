@@ -1,0 +1,164 @@
+@charset "UTF-8";
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul,
+ol {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+figure,
+blockquote,
+dl,
+dd {
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+}
+
+/* Set core html defaults */
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul,
+ol {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Blur images when they have no alt attribute */
+img:not([alt]) {
+  filter: blur(10px);
+}
+
+/* フォームリセット */
+input,
+button,
+select,
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  font: inherit;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type=submit],
+input[type=button],
+label,
+button,
+select {
+  cursor: pointer;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+body {
+  color: #2A2B2A;
+  font-family: "Noto Serif JP", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+}
+
+.inner {
+  width: 1000px;
+  max-width: calc(100% - 180px);
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 767px) {
+  .inner {
+    max-width: calc(100% - 40px);
+  }
+}
+
+.header {
+  background: #FFFFFF;
+}
+
+.footer {
+  padding: 55px 0;
+}
+.footer_wrap {
+  display: flex;
+  align-items: center;
+}
+.footer_left {
+  margin-right: auto;
+}
+.footer_right {
+  margin-left: auto;
+}
+.footer_sns {
+  display: flex;
+}
+.footer_sns_twitter {
+  width: 26px;
+}
+.footer_sns_instagram {
+  width: 26px;
+}
+.footer_nav_ul {
+  display: flex;
+}
+.footer_nav_li:not(:first-child) {
+  margin-left: 20px;
+}/*# sourceMappingURL=style.css.map */
