@@ -1,40 +1,134 @@
+@use "variables" as global;
+@use "mixin";
+
 .product {}
+
+.product_wrapper {
+    padding-bottom: 125px;
+
+}
 
 .product_inner {}
 
 .product_item {
     display: flex;
 
-     @include mq(sp) {
-        display: block;
-    }
 }
 
 
-.product_image {}
+.product_image {
+    margin-top: 125px;
+    max-width: 410px;
+    width: 100%;
+    
+    img {
 
-.product_content {}
+    }
+}
 
-.product_name {}
+.product_content {
+    margin-top: 215px;
+    margin-left: 120px;
+}
 
-.product_size {}
+.product_name {
+    font-size: 24px;
+    line-height: 1.437;
+}
 
-.product_text {}
+.product_size {
+    font-size: 18px;
+    line-height: 1.7222;
+    letter-spacing: 3.69px;
+    font-weight: 200;
+}
 
-.product_link {}
+.product_text {
+    margin-top: 27px;
+    padding-right: 85px;
+    font-size: 18px;
+    line-height: 1.647;
+    letter-spacing: 1.17px;
+    font-weight: 300;
+}
+
+.product_link {
+    position: relative;
+    background: #fff;
+    border-radius: 10px;
+    width: 164px;
+    height: 45px;
+    margin-top: 39px;
+    position: relative;
+    transition: 0.5s ease;
+
+    &::before {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 28px;
+        background: #2A2B2A;
+        right: 20px;
+        bottom: 20px;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 10px;
+        background: #2A2B2A;
+        right: 19px;
+        bottom: 23px;
+        transform: rotate(45deg);
+
+    }
+
+    a {
+        display: block;
+        text-decoration: none;
+        font-weight: 200;
+        padding: 8px 19px;
+        font-size: 18px;
+        letter-spacing: 6.3px;
+        line-height: 1;
+    }
+
+    &:hover {
+        box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+}
+
+.product_wrapper-first {
+    background: #F5F5FE;
+
+}
+
+.product_wrapper-second {
+    background: #E9E9FC;
+}
+
+.product_wrapper-third {
+    background: #FCFAFB;
+}
+
+
 
 .product_item-first {
     display: grid;
     grid-template-columns: 59% 41%;
     grid-template-rows: 10% 90%;
 
-     @include mq(sp) {
-        display: block;
-
-    }
 }
 
 .product_title {
+    padding-top: 185px;
+    color: #887DC5;
+    font-size: 28px;
+    letter-spacing: 5px;
+    font-weight: 500;
+    margin-left: 120px;
+
 
 }
 
@@ -42,8 +136,15 @@
     grid-row: 1 / 3;
     grid-column: 2 /3;
 
+
+
 }
 
 .product_content-first {
     grid-column: 1 / 2;
+    margin-top: 220px;
+}
+
+.product_item-third {
+    flex-direction: row-reverse;
 }
