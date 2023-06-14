@@ -13,6 +13,13 @@
 .product_item {
     display: flex;
 
+     @include mixin.mq(sp) {
+        display: block;
+    }
+
+     @include mq(sp) {
+    }
+
 }
 
 
@@ -20,6 +27,10 @@
     margin-top: 125px;
     max-width: 410px;
     width: 100%;
+
+    @include mixin.mq(sp) {
+        margin-top: 0;
+    }
     
     img {
 
@@ -119,6 +130,10 @@
     grid-template-columns: 59% 41%;
     grid-template-rows: 10% 90%;
 
+    @include mixin.mq(sp) {
+        display: block;
+    }
+
 }
 
 .product_title {
@@ -128,6 +143,13 @@
     letter-spacing: 5px;
     font-weight: 500;
     margin-left: 120px;
+
+    @include mixin.mq(sp) {
+        margin-left: 0;
+        padding: 25px 0;
+        font-style: 22px;
+
+   }
 
 
 }
