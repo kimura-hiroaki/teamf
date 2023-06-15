@@ -146,21 +146,18 @@ a {
   align-items: center;
   height: inherit;
 }
-.header_inner .header-logo {
-  font-family: serif;
+.header-nav {
+  margin-left: auto;
 }
 
 .header-nav-list {
   display: flex;
   align-items: center;
-  margin-left: auto;
-  font-size: 16px;
 }
 .header-nav-list li:not(:first-child) {
   margin-left: 77px;
 }
 .header-nav-list li a {
-  font-family: "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", sans-serif;
   text-decoration: none;
   position: relative;
 }
@@ -192,4 +189,68 @@ a {
 }
 .footer_nav_li:not(:first-child) {
   margin-left: 20px;
+}
+
+.top {
+  margin-top: 100px;
+  height: 700px;
+  background: url(/img/top.png) no-repeat center center/cover;
+}
+
+.top_picture {
+  height: 700px;
+  width: 990px;
+  position: relative;
+}
+
+.top_title {
+  position: absolute;
+  height: 330px;
+  width: 330px;
+  top: 235px;
+  right: 0;
+  padding-top: 92px;
+  z-index: 200;
+  font-size: 36px;
+}
+
+.top-message-title {
+  font-size: 26px;
+}
+
+.top-message-text {
+  font-size: 16pz;
+  margin: 28px 40px 0 0;
+}
+
+.concept {
+  margin-top: 106px;
+  height: 838px;
+}
+
+.concept_contents {
+  display: flex;
+}
+
+.concept_picture img {
+  width: 588px;
+}
+
+.concept_text {
+  padding-left: 80px;
+}
+
+.concept_title {
+  color: #887dc5;
+  margin-top: 28px;
+}
+
+.concept_text_title {
+  margin-top: 28px;
+  font-size: 20px;
+}
+
+.concept_text_message {
+  margin-top: 88px;
+  font-size: 16px;
 }/*# sourceMappingURL=style.css.map */

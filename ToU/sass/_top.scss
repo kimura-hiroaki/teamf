@@ -1,2 +1,35 @@
 @use "variables" as global;
 @use "mixin";
+
+.top {
+  margin-top: 100px;
+  height: 700px;
+  background: url(/img/top.png) no-repeat center center / cover;
+}
+.top_picture {
+  height: 700px;
+  width: 990px;
+  position: relative;
+}
+
+.top_title {
+  position: absolute;
+  height: 330px;
+  width: 330px;
+  top: 235px;
+  right:0;
+  padding-top: 92px;
+  z-index: 200;
+  font-size: 36px;
+}
+.top-message-title {
+  font-size: 26px;
+}
+
+.top-message-text {
+  font-size: 16pz;
+  margin: 28px 40px 0 0;
+}
+.top_btn{
+
+}
