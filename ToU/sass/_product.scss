@@ -6,9 +6,14 @@
 .product_wrapper {
     padding-bottom: 125px;
 
+    @include mixin.mq(sp) {
+        padding-bottom: 60px;
+   }
+
 }
 
-.product_inner {}
+.product_inner {
+}
 
 .product_item {
     display: flex;
@@ -17,8 +22,6 @@
         display: block;
     }
 
-     @include mq(sp) {
-    }
 
 }
 
@@ -30,6 +33,7 @@
 
     @include mixin.mq(sp) {
         margin-top: 0;
+
     }
     
     img {
@@ -40,6 +44,12 @@
 .product_content {
     margin-top: 215px;
     margin-left: 120px;
+
+    @include mixin.mq(sp) {
+        margin-left: 0;
+        margin-top: 44px;
+
+   }
 }
 
 .product_name {
@@ -78,7 +88,7 @@
         position: absolute;
         height: 2px;
         width: 28px;
-        background: #2A2B2A;
+        background: global.$text-color;
         right: 20px;
         bottom: 20px;
     }
@@ -88,7 +98,7 @@
         position: absolute;
         height: 2px;
         width: 10px;
-        background: #2A2B2A;
+        background: global.$text-color;
         right: 19px;
         bottom: 23px;
         transform: rotate(45deg);
@@ -127,8 +137,9 @@
 
 .product_item-first {
     display: grid;
-    grid-template-columns: 59% 41%;
-    grid-template-rows: 10% 90%;
+    grid-template-columns: 389px 1fr;
+    grid-template-rows: auto 1fr;
+    grid-row-gap: 0px;
 
     @include mixin.mq(sp) {
         display: block;
@@ -138,11 +149,11 @@
 
 .product_title {
     padding-top: 185px;
-    color: #887DC5;
+    color: global.$accent-color;
     font-size: 28px;
     letter-spacing: 5px;
     font-weight: 500;
-    margin-left: 120px;
+    grid-area: 1 / 1 / 2 / 2;
 
     @include mixin.mq(sp) {
         margin-left: 0;
@@ -155,16 +166,23 @@
 }
 
 .product_image-first {
-    grid-row: 1 / 3;
-    grid-column: 2 /3;
+    grid-area: 1 / 2 / 3 / 3;
+    margin-left: 130px;
 
-
+    @include mixin.mq(sp) {
+        margin-left: 0;
+   }
 
 }
 
 .product_content-first {
-    grid-column: 1 / 2;
-    margin-top: 220px;
+    grid-area: 2 / 1 / 3 / 2;
+    margin-top: 42px;
+    margin-left: 0;
+}
+
+.product_text-first {
+    padding-right: 0;
 }
 
 .product_item-third {
