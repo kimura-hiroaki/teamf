@@ -1,7 +1,9 @@
 @use "variables" as global;
 @use "mixin";
 
-.product {}
+.product {
+    font-family: Montserrat;
+}
 
 .product_wrapper {
     padding-bottom: 125px;
@@ -32,9 +34,10 @@
     width: 100%;
 
     @include mixin.mq(sp) {
-        margin-top: 0;
-
+        margin: 0 calc(50% - 50vw);
+        width: 100vw;
     }
+
     
     img {
 
@@ -143,6 +146,9 @@
 
     @include mixin.mq(sp) {
         display: block;
+        margin: 0 calc(50% - 50vw);
+        width: 100vw;
+
     }
 
 }
@@ -154,11 +160,31 @@
     letter-spacing: 5px;
     font-weight: 500;
     grid-area: 1 / 1 / 2 / 2;
+    position: relative;
+    display: inline-block;
+
+
+    &::before {
+        content: "";
+        width: 60px;
+        height: 1px;
+        position: absolute;
+        background: global.$accent-color;
+        bottom: 42%;
+        right: -49%;
+        display: none;
+    }
 
     @include mixin.mq(sp) {
         margin-left: 0;
         padding: 25px 0;
-        font-style: 22px;
+        font-size: 22px;
+        margin-left: 20px;
+
+        &::before {
+            display: block;
+        }
+
 
    }
 

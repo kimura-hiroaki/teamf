@@ -31,11 +31,20 @@
 
 .check_body {
     margin-top: 78px;
+
+    @include mixin.mq(sp) {
+        padding: 0 48px 0 47px;
+   }
 }
 
 .check_items {
     display: flex;
     justify-content: space-around;
+
+    @include mixin.mq(sp) {
+        display: block;
+
+   }
 }
 
 .check_item {
@@ -44,7 +53,6 @@
     position: relative;
     padding-bottom: 48px;
     box-shadow: 0px 5px 9px 0px rgba(0, 0, 0, 0.2);
-
 
     &::before {
         content: "";
@@ -78,6 +86,27 @@
         }
     }
 
+    @include mixin.mq(sp) {
+        width: 100%;
+
+        &::before {
+            left: 44%;
+            bottom: -11%;
+            transform: rotate(90deg);
+        }
+    
+        &::after {
+            left: 50%;
+            bottom: -13%;
+            transform: rotate(135deg);
+        }
+    
+
+        &:not(:first-child) {
+            margin-top: 112px;
+        }
+
+   }
 }
 
 .check_img {}
