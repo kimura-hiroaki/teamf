@@ -9,22 +9,35 @@
   display: flex;
 }
 .concept_picture {
+  flex: 0 0 50%;
   img {
-    width: 588px;
+    width: 100%;
   }
 }
 .concept_text {
-  padding-left: 80px;
+  flex: 0 1 50%;
+  margin-left: 70px;
 }
 .concept_title {
   color: #887dc5;
   margin-top: 28px;
+  font-size: 28px;
+  font-family: global.$ff-en;
+  font-weight: 500;
+  letter-spacing: 0.18em;
 }
 .concept_text_title {
   margin-top: 28px;
   font-size: 20px;
+  font-size: 22px;
+  line-height: 40px;
+  letter-spacing: 0.18em;
 }
 .concept_text_message {
   margin-top: 88px;
   font-size: 16px;
+  font-size: 18px;
+  line-height: 40px;
+  font-weight: 300;
+  letter-spacing: 0.065em;
 }
