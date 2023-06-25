@@ -1,2 +1,291 @@
 @use "variables" as global;
 @use "mixin";
+
+.campaign {
+    background: #F5F5FE;
+    padding-top: 100px;
+    padding-bottom: 80px;
+
+    @include mixin.mq(sp) {
+        padding-top: 48px;
+        padding-bottom: 110px;
+    }
+
+    &_title {
+        h2 {
+            font-family: global.$ff-en;
+            font-weight: 500;
+            font-size: clamp(22px, 2.4vw, 28px);
+            line-height: 34px;
+            letter-spacing: 0.18em;
+            color: global.$accent-color;
+
+            @include mixin.mq(sp) {
+                display: inline-block;
+                position: relative;
+
+                &::after {
+                    position: absolute;
+                    content: "";
+                    bottom: 10px;
+                    right: -80px;
+                    width: 60px;
+                    height: 1px;
+                    background: global.$accent-color;
+                }
+            }
+        }
+    }
+
+    &_wrap {
+        margin-top: 56px;
+        display: flex;
+
+        @include mixin.mq(sp) {
+            display: block;
+        }
+    }
+
+    &_introduce {
+        width: calc(100% * 560 / 1000);
+        margin-right: auto;
+
+        @include mixin.mq(sp) {
+            width: 100%;
+        }
+
+        &_header {
+            display: inline-block;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 34px;
+            letter-spacing: 0.195em;
+            padding: 7px 26px;
+            color: #7466C1;
+            border: 2px solid #7466C1;
+            border-radius: 10px;
+
+            @include mixin.mq(sp) {
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        &_info {
+            margin-top: 30px;
+            font-weight: 500;
+            font-size: 22px;
+            line-height: 32px;
+            letter-spacing: 0.115em;
+
+            @include mixin.mq(sp) {
+                font-size: 18px;
+            }
+        }
+
+        &_ul {
+            margin-top: 18px;
+            font-weight: 200;
+            font-size: 18px;
+            line-height: 26px;
+
+            @include mixin.mq(sp) {
+                font-size: 16px;
+            }
+
+            li {
+                margin-top: 8px;
+                list-style: none;
+                position: relative;
+                padding-left: 18px;
+
+                &::before {
+                    position: absolute;
+                    content: "・";
+                    top: 0;
+                    left: 0;
+                }
+            }
+        }
+
+        &_price {
+            margin-top: 36px;
+            font-weight: 200;
+            font-size: 22px;
+            line-height: 32px;
+            position: relative;
+
+            @include mixin.mq(sp) {
+                text-align: center;
+                font-weight: 200;
+                font-size: 20px;
+                line-height: 29px;
+            }
+
+            &::after {
+                position: absolute;
+                content: "";
+                width: 255px;
+                height: 2px;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%) rotateZ(-3.6deg);
+                background: #887DC5;
+
+                @include mixin.mq(sp) {
+                    width: 235px;
+                    left: 50%;
+                    transform: translateX(-50%) translateY(-50%) rotateZ(-3.6deg);
+                }
+            }
+        }
+
+        &_trueprice {
+            margin-top: 16px;
+            display: inline-block;
+            font-family: global.$ff-sub;
+            font-weight: 700;
+            font-size: clamp(32px, 5.5vw, 64px);
+            line-height: 76px;
+            letter-spacing: 0.05em;
+            color: #7466C1;
+            text-decoration-color: #DCB39880;
+            text-decoration-line: underline;
+            text-decoration-thickness: 16px;
+            text-underline-offset: -4px;
+            text-decoration-skip-ink: none;
+
+            @include mixin.mq(sp) {
+                margin-top: 20px;
+                font-size: 76px;
+            }
+
+            .yen {
+                font-size: clamp(16px, 2.7vw, 32px);
+
+                @include mixin.mq(sp) {
+                    font-size: 32px;
+                }
+            }
+
+            .postage {
+                font-family: global.$ff-base;
+                font-weight: 900;
+                font-size: clamp(12px, 2.1vw, 24px);
+                line-height: 34px;
+                letter-spacing: 0.115em;
+                color: global.$text-color;
+
+                @include mixin.mq(sp) {
+                    font-size: 24px;
+                }
+            }
+
+            @include mixin.mq(sp) {
+                &_wrap {
+                    text-align: center;
+                }
+            }
+        }
+
+        &_text {
+            margin-top: 20px;
+            font-weight: 500;
+            font-size: clamp(12px, 1.9vw, 22px);
+            line-height: 32px;
+            letter-spacing: 0.025em;
+
+            @include mixin.mq(sp) {
+                text-align: center;
+                font-weight: 400;
+                font-size: 22px;
+                line-height: 32px;
+                letter-spacing: 0.055em;
+            }
+        }
+    }
+
+    &_image {
+        width: calc(100% * 410 / 1000);
+        margin-left: auto;
+
+        @include mixin.mq(sp) {
+            display: none;
+        }
+
+        &--sp {
+            display: none;
+
+            @include mixin.mq(sp) {
+                margin-top: 65px;
+                display: block;
+                width: 100vw;
+                object-fit: cover;
+            }
+        }
+    }
+
+    &_button {
+        margin-top: 88px;
+        text-align: center;
+
+        @include mixin.mq(sp) {
+            margin-top: 60px;
+        }
+
+        a {
+            display: inline-block;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 26px;
+            line-height: 37px;
+            padding: 22px 84px 22px 44px;
+            color: #FFFFFF;
+            background: #65509F;
+            border-radius: 20px;
+            letter-spacing: 0.165em;
+            box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.2);
+            position: relative;
+
+            @include mixin.mq(sp) {
+                font-size: 14px;
+                line-height: 20px;
+                padding: 13px 38px 13px 18px;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 30px;
+                height: 1px;
+                bottom: 26px;
+                right: 40px;
+                background: #FFFFFF;
+
+                @include mixin.mq(sp) {
+                    width: 15px;
+                    bottom: 16px;
+                    right: 16px;
+                }
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 12px;
+                height: 1px;
+                bottom: 29px;
+                right: 40px;
+                transform: rotateZ(30deg);
+                background: #FFFFFF;
+
+                @include mixin.mq(sp) {
+                    width: 8px;
+                    bottom: 18px;
+                    right: 16px;
+                }
+            }
+        }
+    }
+}
