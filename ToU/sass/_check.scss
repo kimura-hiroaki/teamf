@@ -3,6 +3,7 @@
 
 .check {
     background: #E6E2EE;
+    padding-bottom: 84px;
 }
 
 .check_inner {}
@@ -11,6 +12,10 @@
     text-align: center;
     padding-top: 59px;
 
+    @include mixin.mq(sp) {
+        text-align: left;
+   }
+
 }
 
 .check_title {
@@ -18,6 +23,26 @@
     font-size: 28px;
     letter-spacing: 5.04px;
     font-weight: 500;
+    position: relative;
+
+    &::before {
+        content: "";
+        width: 60px;
+        height: 1px;
+        position: absolute;
+        background: global.$accent-color;
+        bottom: 21%;
+        right: 47%;
+        display: none;
+    }
+
+    @include mixin.mq(sp) {
+        font-size: 22px;
+
+        &::before {
+            display: block;
+        }
+   }
     
 }
 
@@ -31,11 +56,20 @@
 
 .check_body {
     margin-top: 78px;
+
+    @include mixin.mq(sp) {
+        padding: 0 48px 0 47px;
+   }
 }
 
 .check_items {
     display: flex;
     justify-content: space-around;
+
+    @include mixin.mq(sp) {
+        display: block;
+
+   }
 }
 
 .check_item {
@@ -44,7 +78,6 @@
     position: relative;
     padding-bottom: 48px;
     box-shadow: 0px 5px 9px 0px rgba(0, 0, 0, 0.2);
-
 
     &::before {
         content: "";
@@ -78,6 +111,27 @@
         }
     }
 
+    @include mixin.mq(sp) {
+        width: 100%;
+
+        &::before {
+            left: 44%;
+            bottom: -11%;
+            transform: rotate(90deg);
+        }
+    
+        &::after {
+            left: 50%;
+            bottom: -13%;
+            transform: rotate(135deg);
+        }
+    
+
+        &:not(:first-child) {
+            margin-top: 112px;
+        }
+
+   }
 }
 
 .check_img {}
@@ -106,11 +160,15 @@
 }
 
 .check_info {
-    font-size: 20px;
+    font-size: 21px;
     letter-spacing: 0.8px;
     list-style: 1.437;
     margin-left: 20px;
     margin-top: 20px;
+
+    @include mixin.mq(sp) {
+        font-size: 20px;
+   }
 }
 
 .check_text {
