@@ -24,32 +24,33 @@
     <header class="header">
       <div class="header_inner inner">
         <h1 class="header_logo">To U</h1>
-        <ul class="header_nav">
-          <li><a href="#CONCEPT">CONCEPT</a></li>
-          <li><a href="#PRODUCT">PRODUCT</a></li>
-          <li><a href="#CHECK">CHECK</a></li>
-          <li><a href="#NEWS">NEWS</a></li>
-        </ul>
+        <nav class="header_nav" id="js-nav">
+          <ul>
+            <li><a href="#CONCEPT">CONCEPT</a></li>
+            <li><a href="#PRODUCT">PRODUCT</a></li>
+            <li><a href="#CHECK">CHECK</a></li>
+            <li><a href="#NEWS">NEWS</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
-    <div class="drawer-icon">
-      <div class="drawer-icon__bars">
-        <div class="drawer-icon__bar1"></div>
-        <div class="drawer-icon__bar2"></div>
-        <div class="drawer-icon__bar3"></div>
-      </div>
+    <button class="nav_icon js_drawer active" id="js-hamburger">
+      <span class="nav_icon_bars">
+        <span class="nav_icon_bar"></span>
+        <span class="nav_icon_bar"></span>
+        <span class="nav_icon_bar"></span>
+      </span>
+    </button>
+    <div class="drawer_background"></div>
+    <div class="nav_content">
+      <ul>
+        <li><a href="#card">Card</a></li>
+        <li><a href="#News">News</a></li>
+        <li><a href="#price">Price</a></li>
+        <li><a href="#access">Access</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </div>
-    <div class="drawer-content">
-      <div class="drawer-content__items">
-        <div class="drawer-content__item"><a href="#card">Card</a></div>
-        <div class="drawer-content__item"><a href="#News">News</a></div>
-        <div class="drawer-content__item"><a href="#price">Price</a></div>
-        <div class="drawer-content__item"><a href="#access">Access</a></div>
-        <div class="drawer-content__item"><a href="#contact">Contact</a></div>
-      </div>
-    </div>
-
-    <div class="drawer-background"></div>
     <!-- main -->
     <main>
       <!-- top -->
@@ -81,10 +82,10 @@
                 一人ひとりに合ったスキンケア。
               </p>
               <p class="concept_text_message">
-                流行ってるしレビューが良いからといって<br>
-                買ってみたものの、肌に合わなくて<br>
-                使わなくなってしまった化粧品たち。<br><br>
-                10,000通りの組み合わせからあなたの肌質や<br>
+                流行ってるしレビューが良いからといって<br />
+                買ってみたものの、肌に合わなくて<br />
+                使わなくなってしまった化粧品たち。<br /><br />
+                10,000通りの組み合わせからあなたの肌質や<br />
                 体質に最適なスキンケアをお届けします。
               </p>
             </div>
@@ -248,5 +249,16 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      // ドロワー
+      const ham = document.querySelector("#js-hamburger"); //js-hamburgerの要素を取得し、変数hamに格納
+      const nav = document.querySelector("#js-nav"); //js-navの要素を取得し、変数navに格納
+
+      ham.addEventListener("click", function () {
+        ham.classList.toggle("active"); // ハンバーガーメニューにactiveクラスを付け外し
+        nav.classList.toggle("active"); // ナビゲーションメニューにactiveクラスを付け外し
+      });
+    </script>
   </body>
 </html>

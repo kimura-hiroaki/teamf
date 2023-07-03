@@ -11,10 +11,10 @@
   &::before {
     content: "";
     position: absolute;
-    top: -50px;
-    right: calc(15%);
-    width: 200px;
-    height: 800px;
+    top: 0;
+    // right: 16%;
+    width: 212px;
+    height: 700px;
     background: linear-gradient(
       180deg,
       rgba(255, 255, 255, 0.37) 0%,
@@ -23,7 +23,7 @@
       rgba(255, 255, 255, 0.81) 99.99%,
       rgba(239, 239, 239, 0.8) 100%
     );
-    transform: matrix(-0.96, -0.28, -0.28, 0.96, 0, 0);
+    transform: skew(-15deg); /* 平行四辺形の傾斜角度 */
   }
 }
 
@@ -34,23 +34,23 @@
 }
 
 .top_title {
-  z-index: 200;
   font-size: 36px;
   letter-spacing: 0.315em;
+  position: relative;
 }
 
 .top_btn {
   margin-top: 106px;
-
   a {
     display: inline-block;
-    text-align: center;
+    text-align: left;
     width: 453px;
     max-width: 100%;
     height: 79px;
     line-height: 79px;
     font-size: 26px;
     font-weight: 400;
+    padding: 0 43px;
     color: #fff;
     letter-spacing: 0.165em;
     background: global.$main-color;
@@ -64,8 +64,33 @@
     //   line-height: 60px;
     //   font-size: 24px;
     // }
+    position: relative;
+
     &:hover {
       opacity: 0.7;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+    }
+    &::before {
+      width: 25px;
+      bottom: 30px;
+      right: 40px;
+
+      border-bottom: 2px solid #fff;
+    }
+
+    &::after {
+      width: 10px;
+      height: 1px;
+      top: 44px;
+      right: 39.5px;
+
+      border-top: 2px solid #fff;
+      transform: rotate(40deg);
     }
   }
 }
