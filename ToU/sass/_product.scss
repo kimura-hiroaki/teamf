@@ -1,19 +1,237 @@
-.product {}
+@use "variables" as global;
+@use "mixin";
 
-.product_inner {}
+.product {
+}
 
-.product_item {}
+.product_wrapper {
+    padding-bottom: 125px;
 
-.product_title {}
+    @include mixin.mq(sp) {
+        padding-bottom: 60px;
+   }
 
-.product_image {}
+}
 
-.product_content {}
+.product_inner {
+}
 
-.product_name {}
+.product_item {
+    display: flex;
 
-.product_size {}
+     @include mixin.mq(sp) {
+        display: block;
+    }
 
-.product_text {}
 
-.product_link {}
+}
+
+
+.product_image {
+    margin-top: 125px;
+    max-width: 410px;
+    width: 100%;
+
+    @include mixin.mq(sp) {
+        margin: 0 calc(50% - 50vw);
+        width: 100vw;
+    }
+
+    
+    img {
+
+    }
+}
+
+.product_content {
+    margin-top: 215px;
+    margin-left: 120px;
+
+    @include mixin.mq(sp) {
+        margin-left: 0;
+        margin-top: 44px;
+
+   }
+}
+
+.product_name {
+    font-size: 24px;
+    line-height: 1.437;
+
+    @include mixin.mq(sp) {
+        font-size: 22px;
+   }
+}
+
+.product_size {
+    font-size: 18px;
+    line-height: 1.7222;
+    letter-spacing: 3.69px;
+    font-weight: 200;
+    @include mixin.mq(sp) {
+        font-size: 14px;
+   }
+}
+
+.product_text {
+    margin-top: 27px;
+    padding-right: 85px;
+    font-size: 18px;
+    line-height: 1.647;
+    letter-spacing: 1.17px;
+    font-weight: 300;
+
+    @include mixin.mq(sp) {
+        padding-right: 60px;
+        font-size: 14px;
+   }
+}
+
+.product_link {
+    position: relative;
+    background: #fff;
+    border-radius: 10px;
+    width: 164px;
+    height: 45px;
+    margin-top: 39px;
+    position: relative;
+    transition: 0.5s ease;
+
+    &::before {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 28px;
+        background: global.$text-color;
+        right: 20px;
+        bottom: 20px;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 10px;
+        background: global.$text-color;
+        right: 19px;
+        bottom: 23px;
+        transform: rotate(45deg);
+
+    }
+
+    a {
+        display: block;
+        text-decoration: none;
+        font-weight: 200;
+        padding: 0 19px;
+        font-size: 18px;
+        letter-spacing: 6.3px;
+        line-height: 45px;
+    }
+
+    &:hover {
+        box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+}
+
+.product_wrapper-first {
+    background: #F5F5FE;
+
+}
+
+.product_wrapper-second {
+    background: #E9E9FC;
+}
+
+.product_wrapper-third {
+    background: #FCFAFB;
+}
+
+
+
+.product_item-first {
+    display: grid;
+    grid-template-columns: 389px 1fr;
+    grid-template-rows: auto 1fr;
+    grid-row-gap: 0px;
+
+    @include mixin.mq(sp) {
+        display: block;
+        margin: 0 calc(50% - 50vw);
+        width: 100vw;
+
+    }
+
+}
+
+.product_title {
+    padding-top: 185px;
+    color: global.$accent-color;
+    font-size: 28px;
+    letter-spacing: 5px;
+    font-weight: 500;
+    grid-area: 1 / 1 / 2 / 2;
+    position: relative;
+    display: inline-block;
+
+
+    &::before {
+        content: "";
+        width: 60px;
+        height: 1px;
+        position: absolute;
+        background: global.$accent-color;
+        bottom: 42%;
+        right: -49%;
+        display: none;
+    }
+
+    @include mixin.mq(sp) {
+        margin-left: 0;
+        padding: 25px 0;
+        font-size: 22px;
+        margin-left: 20px;
+
+        &::before {
+            display: block;
+        }
+
+
+   }
+
+
+}
+
+.product_image-first {
+    grid-area: 1 / 2 / 3 / 3;
+    margin-left: 130px;
+
+    @include mixin.mq(sp) {
+        margin-left: 0;
+   }
+
+}
+
+.product_content-first {
+    grid-area: 2 / 1 / 3 / 2;
+    margin-top: 42px;
+    margin-left: 0;
+    @include mixin.mq(sp) {
+        padding: 0 69px 0 20px;
+   }
+}
+
+.product_text-first {
+    padding-right: 0;
+
+    @include mixin.mq(sp) {
+        font-size: 14px;
+        line-height: 1.64;
+        letter-spacing: 0.35px;
+        font-weight: 300;
+   }
+}
+
+.product_item-third {
+    flex-direction: row-reverse;
+}

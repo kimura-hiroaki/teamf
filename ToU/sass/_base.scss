@@ -28,3 +28,11 @@ a {
     max-width: calc(100% - 20px * 2);
   }
 }
+
+.is-SP {
+  display: none;
+
+  @include mixin.mq(sp) {
+    display: block;
+  }
+}

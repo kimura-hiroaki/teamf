@@ -7,18 +7,36 @@
     &_wrap {
         display: flex;
         align-items: center;
+
+        @include mixin.mq(sp) {
+            display: block;
+        }
     }
 
     &_left {
         margin-right: auto;
+
+        @include mixin.mq(sp) {
+            text-align: center;
+        }
     }
 
     &_right {
         margin-left: auto;
     }
 
+    &_logo {
+        font-size: 24px;
+    }
+
     &_sns {
+        margin-top: 24px;
         display: flex;
+
+        @include mixin.mq(sp) {
+            margin-top: 36px;
+            justify-content: center;
+        }
 
         &_twitter {
             width: 26px;
@@ -26,17 +44,40 @@
 
         &_instagram {
             width: 26px;
+            margin-left: 20px;
         }
     }
 
     &_nav {
         &_ul {
             display: flex;
+
+            @include mixin.mq(sp) {
+                display: block;
+            }
         }
 
         &_li {
+            @include mixin.mq(sp) {
+                margin-top: 56px;
+                text-align: center;
+            }
+
             &:not(:first-child) {
-                margin-left: 20px;
+                margin-left: 32px;
+
+                @include mixin.mq(sp) {
+                    margin-left: auto;
+                    margin-top: 20px;
+                }
+            }
+
+            a {
+                text-decoration: none;
+                font-family: global.$ff-en;
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 20px;
             }
         }
     }
