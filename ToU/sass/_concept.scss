@@ -8,12 +8,12 @@
 .concept_contents {
   margin-top: 125px;
   display: flex;
+      @include mixin.mq(sp) {
+        display: block;
+    }
 }
 .concept_picture {
   flex: 0 0 50%;
-  img {
-    width: 100%;
-  }
 }
 .concept_text {
   flex: 0 1 50%;

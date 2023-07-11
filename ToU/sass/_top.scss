@@ -7,6 +7,9 @@
   background: url(/img/top.png) no-repeat center center / cover;
   font-style: global.$ff-base;
   position: relative;
+  @include mixin.mq(sp) {
+    height: 373px;
+  }
 
   &::before {
     content: "";
@@ -25,6 +28,9 @@
       rgba(239, 239, 239, 0.8) 100%
     );
     transform: skew(-15deg); /* 平行四辺形の傾斜角度 */
+    @include mixin.mq(sp) {
+      display: none;
+    }
   }
 }
 
@@ -32,16 +38,26 @@
   padding-top: 198px;
   text-align: right;
   width: 100%;
+  @include mixin.mq(sp) {
+    padding-top: 82px;
+    letter-spacing: 2.25px;
+  }
 }
 
 .top_title {
   font-size: 36px;
   letter-spacing: 0.315em;
   position: relative;
+  @include mixin.mq(sp) {
+    font-size: 18px;
+  }
 }
 
 .top_btn {
   margin-top: 106px;
+  @include mixin.mq(sp) {
+    margin-top: 73px;
+  }
   a {
     display: inline-block;
     text-align: left;
@@ -59,13 +75,15 @@
     box-shadow: 0 3px 6px rgba(#000, 0.16);
     text-decoration: none;
     transition: all 0.3s ease 0s;
-    // @include mq("sp") {
-    //   width: 280px;
-    //   height: 60px;
-    //   line-height: 60px;
-    //   font-size: 24px;
-    // }
     position: relative;
+
+    @include mixin.mq(sp) {
+      width: 223px;
+      height: 47px;
+      line-height: 47px;
+      padding: 0 17px;
+      font-size: 14px;
+    }
 
     &:hover {
       opacity: 0.7;
@@ -80,8 +98,14 @@
       width: 25px;
       bottom: 30px;
       right: 40px;
-
       border-bottom: 2px solid #fff;
+
+      @include mixin.mq(sp) {
+        width: 10px;
+        bottom: 16px;
+        right: 15px;
+        border-bottom: 1px solid #fff;
+      }
     }
 
     &::after {
@@ -91,6 +115,15 @@
       right: 39.5px;
       border-top: 2px solid #fff;
       transform: rotate(40deg);
+
+      @include mixin.mq(sp) {
+        width: 6px;
+        height: 1px;
+        top: 28.5px;
+        right: 13px;
+        border-top: 1px solid #fff;
+        transform: rotate(40deg);
+      }
     }
   }
 }
