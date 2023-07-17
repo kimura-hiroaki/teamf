@@ -44,11 +44,10 @@
     <div class="drawer_background"></div>
     <div class="nav_content">
       <ul>
-        <li><a href="#card">Card</a></li>
-        <li><a href="#News">News</a></li>
-        <li><a href="#price">Price</a></li>
-        <li><a href="#access">Access</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#CONCEPT">CONCEPT</a></li>
+        <li><a href="#PRODUCT">PRODUCT</a></li>
+        <li><a href="#CHECK">CHECK</a></li>
+        <li><a href="#NEWS">NEWS</a></li>
       </ul>
     </div>
     <!-- main -->
@@ -315,12 +314,20 @@
 
     <script>
       // ドロワー
-      const ham = document.querySelector("#js-hamburger"); //js-hamburgerの要素を取得し、変数hamに格納
-      const nav = document.querySelector("#js-nav"); //js-navの要素を取得し、変数navに格納
+      // const ham = document.querySelector("#js-hamburger"); //js-hamburgerの要素を取得し、変数hamに格納
+      // const nav = document.querySelector("#js-nav"); //js-navの要素を取得し、変数navに格納
 
-      ham.addEventListener("click", function () {
-        ham.classList.toggle("active"); // ハンバーガーメニューにactiveクラスを付け外し
-        nav.classList.toggle("active"); // ナビゲーションメニューにactiveクラスを付け外し
+      // ham.addEventListener("click", function () {
+      //   ham.classList.toggle("active"); // ハンバーガーメニューにactiveクラスを付け外し
+      //   nav.classList.toggle("active"); // ナビゲーションメニューにactiveクラスを付け外し
+      // });
+      // ハンバーガーメニューのクリックイベントの処理
+      const hamburgerButton = document.getElementById("js-hamburger");
+      const navContent = document.querySelector(".nav_content");
+
+      hamburgerButton.addEventListener("click", () => {
+        hamburgerButton.classList.toggle("active");
+        navContent.classList.toggle("active");
       });
     </script>
   </body>

@@ -19,7 +19,6 @@ $drawer-content-width: 200px;
 .header {
   background: #f5f5fe;
   position: fixed;
-
   top: 0;
   left: 0;
   width: 100%;
@@ -47,7 +46,7 @@ $drawer-content-width: 200px;
   font-size: 24px;
   font-weight: 300;
   @include m.mq("sp") {
-    font-size:20px;
+    font-size: 20px;
     margin-left: 30px;
   }
 }
@@ -197,6 +196,7 @@ $drawer-content-width: 200px;
 }
 
 .nav_content {
+  display: none;
   overflow: auto;
   position: fixed;
   top: 0;
