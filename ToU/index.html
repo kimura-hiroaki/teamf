@@ -34,7 +34,7 @@
         </nav>
       </div>
     </header>
-    <button class="nav_icon js_drawer active" id="js-hamburger">
+    <button class="nav_icon js_drawer" id="js-hamburger">
       <span class="nav_icon_bars">
         <span class="nav_icon_bar"></span>
         <span class="nav_icon_bar"></span>
@@ -313,21 +313,14 @@
     </footer>
 
     <script>
-      // ドロワー
-      // const ham = document.querySelector("#js-hamburger"); //js-hamburgerの要素を取得し、変数hamに格納
-      // const nav = document.querySelector("#js-nav"); //js-navの要素を取得し、変数navに格納
-
-      // ham.addEventListener("click", function () {
-      //   ham.classList.toggle("active"); // ハンバーガーメニューにactiveクラスを付け外し
-      //   nav.classList.toggle("active"); // ナビゲーションメニューにactiveクラスを付け外し
-      // });
-      // ハンバーガーメニューのクリックイベントの処理
       const hamburgerButton = document.getElementById("js-hamburger");
       const navContent = document.querySelector(".nav_content");
+      const backGround = document.querySelector(".drawer_background");
 
       hamburgerButton.addEventListener("click", () => {
         hamburgerButton.classList.toggle("active");
         navContent.classList.toggle("active");
+        backGround.classList.toggle("active");
       });
     </script>
   </body>

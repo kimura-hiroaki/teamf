@@ -96,7 +96,7 @@ $drawer-content-width: 200px;
           transition: all 0.3s ease 0s;
         }
 
-        &.is-active {
+        &.active {
           &::after {
             opacity: 1;
           }
@@ -120,7 +120,7 @@ $drawer-content-width: 200px;
   border: none;
   padding: 0;
 
-  &.is-checked {
+  &.active {
     transform: translateX(-$drawer-content-width);
   }
 
@@ -160,7 +160,9 @@ $drawer-content-width: 200px;
     top: ($drawer-bar-space + $drawer-bar-height) * 2;
   }
 
-  .is-checked & {
+  .active & {
+    background: #fff;
+
     &:nth-of-type(1) {
       top: 10px;
       transform: rotate(-45deg);
@@ -189,14 +191,13 @@ $drawer-content-width: 200px;
   opacity: 0;
   transition: all 0.5s ease 0s;
 
-  &.is-checked {
+  &.active {
     display: block;
     opacity: 0.8;
   }
 }
 
 .nav_content {
-  display: none;
   overflow: auto;
   position: fixed;
   top: 0;
@@ -213,7 +214,7 @@ $drawer-content-width: 200px;
   text-align: left;
   color: #707070;
 
-  &.is-checked {
+  &.active {
     transform: translateX(0);
     box-shadow: 6px 0 25px rgba(#000, 0.16);
   }
@@ -224,13 +225,13 @@ $drawer-content-width: 200px;
     padding: 0;
 
     li {
-      border-bottom: 1px dotted #707070;
-
       a {
+        font-family: global.$ff-en;
         text-decoration: none;
         display: block;
         position: relative;
-        padding: 16px 30px 14px 20px;
+        padding: 20px;
+        text-align: center;
         color: #707070;
 
         &::after {
