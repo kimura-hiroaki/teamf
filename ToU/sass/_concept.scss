@@ -3,21 +3,45 @@
 
 .concept {
   margin-top: 106px;
-  height: 838px;
+  margin-bottom: 125px;
+  @include mixin.mq(sp) {
+    margin-top: 43px;
+    margin-bottom: 71px;
+  }
 }
 .concept_contents {
   margin-top: 125px;
   display: flex;
-      @include mixin.mq(sp) {
-        display: block;
-    }
+  @include mixin.mq(sp) {
+    display: block;
+    flex-direction: column;
+    position: relative;
+    margin-top: 43px;
+  }
 }
 .concept_picture {
   flex: 0 0 50%;
+  @include mixin.mq(sp) {
+    display: block;
+    position: absolute;
+    top: 60px;
+    margin: 0 calc(50% - 50vw);
+    width: 100vw;
+    box-shadow: 0px 5px 9px 0px rgba(0, 0, 0, 0.20);
+    img {
+      max-width: 377px;
+      height: 300px;
+      object-fit: cover;
+
+    }
+  }
 }
 .concept_text {
   flex: 0 1 50%;
   margin-left: 70px;
+  @include mixin.mq(sp) {
+    margin: 0;
+  }
 }
 .concept_title {
   color: #887dc5;
@@ -26,6 +50,21 @@
   font-family: global.$ff-en;
   font-weight: 500;
   letter-spacing: 0.18em;
+  @include mixin.mq(sp) {
+    display: inline-block;
+    font-size: 22px;
+    position: relative;
+    margin-top: 0;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 1px;
+      bottom: 12px;
+      right: -80px;
+      background: global.$accent-color;
+    }
+  }
 }
 .concept_text_title {
   margin-top: 28px;
@@ -33,6 +72,11 @@
   font-size: 22px;
   line-height: 40px;
   letter-spacing: 0.18em;
+  @include mixin.mq(sp) {
+    font-size: global.$fz-base;
+    line-height: 32px;
+    margin-top: 346px;
+  }
 }
 .concept_text_message {
   margin-top: 88px;
@@ -41,4 +85,9 @@
   line-height: 40px;
   font-weight: 300;
   letter-spacing: 0.065em;
+  @include mixin.mq(sp) {
+    margin-top: 30px;
+    font-size: 12px;
+    line-height: 24px;
+  }
 }
