@@ -65,6 +65,8 @@
 .check_items {
     display: flex;
     justify-content: space-around;
+    position: relative;
+
 
     @include mixin.mq(sp) {
         display: block;
@@ -82,23 +84,28 @@
     &::before {
         content: "";
         position: absolute;
-        height: 1px;
-        width: 28px;
-        background: global.$text-color;
-        right: -39px;
-        bottom: 185px;
+        right: -12%;
+        bottom: 55%;
+        width: 20px;
+        height: 6px;
+        border-bottom: 1px solid global.$text-color;
+        border-right: 1px solid global.$text-color;
+        transform: skew(45deg);
     }
 
     &::after {
         content: "";
         position: absolute;
-        height: 2px;
-        width: 7px;
-        background: global.$text-color;
-        right: -39px;
-        bottom: 187px;
-        transform: rotate(45deg);
+        left: 50%;
+        bottom: -17%;
+        width: 6px;
+        height: 20px;
+        border-bottom: 1px solid transparent;
+        border-left: 1px solid transparent;
+        transform: skew(0deg,308deg);
     }
+
+
 
     &:nth-child(3) {
 
@@ -115,17 +122,16 @@
         width: 100%;
 
         &::before {
-            left: 44%;
-            bottom: -11%;
-            transform: rotate(90deg);
+            border-bottom: 1px solid transparent;
+            border-right: 1px solid transparent;
         }
-    
+
         &::after {
-            left: 50%;
-            bottom: -13%;
-            transform: rotate(135deg);
+            border-bottom: 1px solid global.$text-color;
+            border-left: 1px solid global.$text-color;
         }
     
+
 
         &:not(:first-child) {
             margin-top: 112px;
