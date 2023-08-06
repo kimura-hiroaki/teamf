@@ -33,17 +33,17 @@
     );
     transform: skew(-15deg); /* 平行四辺形の傾斜角度 */
     overflow: hidden;
-    @include mixin.mq(sp) {
-      top: 100;
-      right: 5%;
-      width: 100px;
-      height: 373px;
-    }
+    //   @include mixin.mq(sp) {
+    //     top: 100;
+    //     right: 5%;
+    //     width: 100px;
+    //     height: 373px;
+    //   }
+    // }
   }
 }
-
-.top_comp{
-  @include mixin.mq(sp){
+.top_comp {
+  @include mixin.mq(sp) {
     position: relative;
     max-width: 335px;
     width: 100%;
@@ -57,7 +57,7 @@
     position: absolute;
     max-width: 130px;
     top: -5px;
-    left:0;
+    left: 0;
     z-index: 10;
   }
 }
